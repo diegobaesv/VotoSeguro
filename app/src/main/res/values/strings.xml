@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VotoSeguro</string>
+    <string name="boton_demo">Boton!</string>
 </resources>
