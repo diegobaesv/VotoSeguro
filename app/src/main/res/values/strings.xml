@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">VotoSeguro</string>
     <string name="boton_demo">Boton!</string>
+
+    <string name="actinicio_edt_dni">Documento de Identidad</string>
+    <string name="actinicio_edt_digito">Digito Verificador</string>
+    <string name="actinicio_edt_fechaemision">Fecha Emisión</string>
+    <string name="actinicio_btn_verificar">Verificar</string>
 </resources>

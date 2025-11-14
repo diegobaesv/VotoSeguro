@@ -1,6 +1,10 @@
 package com.sise.votoseguro.presentation.activities;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +16,10 @@ import com.sise.votoseguro.R;
 
 public class InicioActivity extends AppCompatActivity {
 
+    private EditText edtDni;
+    private EditText edtDigito;
+    private EditText edtFechaEmision;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +30,15 @@ public class InicioActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        edtDni = findViewById(R.id.actinicio_edt_dni);
+        edtDigito = findViewById(R.id.actinicio_edt_digito);
+        edtFechaEmision = findViewById(R.id.actinicio_edt_fechaemision);
+
     }
+
+    public void onClicVerificar(View v) {
+        Toast.makeText(this,"Hola con public onClick!", Toast.LENGTH_SHORT).show();
+    }
+
 }
