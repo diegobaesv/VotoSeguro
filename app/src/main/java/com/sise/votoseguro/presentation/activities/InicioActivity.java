@@ -1,6 +1,7 @@
 package com.sise.votoseguro.presentation.activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,9 +14,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.sise.votoseguro.R;
+import com.sise.votoseguro.presentation.common.Validator;
 
 public class InicioActivity extends AppCompatActivity {
 
+    private final String TAG = InicioActivity.class.getSimpleName();
     private EditText edtDni;
     private EditText edtDigito;
     private EditText edtFechaEmision;
@@ -34,10 +37,15 @@ public class InicioActivity extends AppCompatActivity {
         edtDni = findViewById(R.id.actinicio_edt_dni);
         edtDigito = findViewById(R.id.actinicio_edt_digito);
         edtFechaEmision = findViewById(R.id.actinicio_edt_fechaemision);
-
     }
 
     public void onClicVerificar(View v) {
+
+        Validator.with(edtDni)
+                .required()
+                .length(8);
+
+
         Toast.makeText(this,"Hola con public onClick!", Toast.LENGTH_SHORT).show();
     }
 
