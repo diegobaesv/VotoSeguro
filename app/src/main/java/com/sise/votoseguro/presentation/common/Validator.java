@@ -35,7 +35,7 @@ public class Validator {
 
     public Validator isDate() {
         String value = editText.getText().toString().trim();
-        if(errorMessage == null && isValidDate(value)) {
+        if(errorMessage == null && !isValidDate(value)) {
             errorMessage = "El campo debe ser fecha válida";
         }
         return this;

@@ -1,5 +1,6 @@
 package com.sise.votoseguro.presentation.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,12 +42,25 @@ public class InicioActivity extends AppCompatActivity {
 
     public void onClicVerificar(View v) {
 
-        Validator.with(edtDni)
+        if(!Validator.with(edtDni)
                 .required()
-                .length(8);
+                .length(8)
+                .validate()) return;
 
+        if(!Validator.with(edtDigito)
+                .required()
+                .length(1)
+                .validate()) return;
 
-        Toast.makeText(this,"Hola con public onClick!", Toast.LENGTH_SHORT).show();
+        if(!Validator.with(edtFechaEmision)
+                .required()
+                .isDate()
+                .validate()) return;
+
+        //llamada al api
+
+        Intent intent = new Intent(this, ReconocimientoActivity.class);
+        startActivity(intent);
     }
 
 }
