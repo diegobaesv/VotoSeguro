@@ -6,4 +6,9 @@
     <string name="actinicio_edt_digito">Digito Verificador</string>
     <string name="actinicio_edt_fechaemision">Fecha Emisión</string>
     <string name="actinicio_btn_verificar">Verificar</string>
+
+    <string name="actreconocimiento_lbl_estado">Verificando</string>
+
+    <string name="acteleccionesvig_lbl_titulo">Elecciones Vigentes</string>
+
 </resources>
