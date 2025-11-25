@@ -1,4 +1,4 @@
-package com.sise.votoseguro.presentation.activities;
+package com.sise.votoseguro.presentation.reconocimiento;
 
 import android.Manifest;
 import android.content.Intent;
@@ -23,6 +23,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.sise.votoseguro.R;
+import com.sise.votoseguro.presentation.elecciones_vigentes.EleccionesVigentesActivity;
+import com.sise.votoseguro.presentation.inicio.InicioActivity;
 
 public class ReconocimientoActivity extends AppCompatActivity {
 
@@ -56,7 +58,7 @@ public class ReconocimientoActivity extends AppCompatActivity {
 
     private void goToEleccionesVigentes() {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Intent intent = new Intent(this,EleccionesVigentesActivity.class);
+            Intent intent = new Intent(this, EleccionesVigentesActivity.class);
             startActivity(intent);
             finish();
         }, 3000);

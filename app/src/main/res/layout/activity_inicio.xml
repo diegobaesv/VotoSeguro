@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.InicioActivity">
+    tools:context=".presentation.inicio.InicioActivity">
 
     <ImageView
         android:id="@+id/actinicio_imv_logo"

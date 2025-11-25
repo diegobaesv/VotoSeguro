@@ -15,16 +15,16 @@
         android:theme="@style/Theme.VotoSeguro"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.activities.EleccionesVigentesActivity"
+            android:name=".presentation.elecciones_vigentes.EleccionesVigentesActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.activities.ReconocimientoActivity"
+            android:name=".presentation.reconocimiento.ReconocimientoActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.activities.InicioActivity"
+            android:name=".presentation.inicio.InicioActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.activities.MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
