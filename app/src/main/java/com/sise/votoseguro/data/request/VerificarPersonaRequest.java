@@ -4,7 +4,7 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class ValidarPersonaRequest {
+public class VerificarPersonaRequest {
     private String numeroDocumento;
     private Integer digitoVerificador;
     private Date fechaEmision;

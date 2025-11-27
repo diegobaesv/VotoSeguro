@@ -9,7 +9,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.sise.votoseguro.R;
-import com.sise.votoseguro.data.request.ValidarPersonaRequest;
 
 public class EleccionesVigentesActivity extends AppCompatActivity {
 
