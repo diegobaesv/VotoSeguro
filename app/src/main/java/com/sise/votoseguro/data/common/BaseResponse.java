@@ -15,6 +15,6 @@ public class BaseResponse<T> {
     }
 
     public static <T> BaseResponse<T> error(String message) {
-        return new BaseResponse<T>(true, message, null);
+        return new BaseResponse<T>(false, message, null);
     }
 }
