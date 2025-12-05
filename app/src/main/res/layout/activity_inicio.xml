@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/actinicio_imv_logo"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/logo_onpe" />
 
     <EditText
         android:id="@+id/actinicio_edt_dni"
@@ -53,7 +53,8 @@
         android:hint="@string/actinicio_edt_fechaemision"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
-        android:inputType="date"
+        android:inputType="none"
+        android:focusable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/actinicio_edt_digito"

@@ -2,6 +2,7 @@ package com.sise.votoseguro.presentation;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -27,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onClickInicio(View v) {
-        Intent i = new Intent(this, InicioActivity.class);
-        startActivity(i);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //settimeoout equivalente
+        new Handler().postDelayed(()-> {
+            Intent i = new Intent(this, InicioActivity.class);
+            startActivity(i);
+            this.finish();
+        }, 2000);
     }
 
 }

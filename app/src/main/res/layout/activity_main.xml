@@ -5,17 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    android:backgroundTintMode="add"
     tools:context=".presentation.MainActivity">
 
-    <Button
+    <ImageView
+        android:id="@+id/actmain_imv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ir a inicio"
-        android:onClick="onClickInicio"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/logo_onpe"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/actmain_txt_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:foregroundTint="#003770"
+        android:foregroundTintMode="add"
+        android:text="@string/actmain_lbl_titulo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actmain_imv_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.sise.votoseguro.presentation.inicio;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,8 @@ import com.sise.votoseguro.data.request.VerificarPersonaRequest;
 import com.sise.votoseguro.presentation.common.Util;
 import com.sise.votoseguro.presentation.reconocimiento.ReconocimientoActivity;
 import com.sise.votoseguro.presentation.common.Validator;
+
+import java.util.Calendar;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -45,6 +48,25 @@ public class InicioActivity extends AppCompatActivity {
         edtFechaEmision = findViewById(R.id.actinicio_edt_fechaemision);
 
         inicioViewModel = new ViewModelProvider(this).get(InicioViewModel.class);
+
+        configurarEditFecha();
+    }
+
+    private void configurarEditFecha() {
+        edtFechaEmision.setOnClickListener(v -> {
+            final Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                    (view, y, m , d) -> {
+                        //  dd/MM/yyyy
+                        String fecha = String.format("%02d/%02d/%04d", d, (m + 1), y);
+                        edtFechaEmision.setText(fecha);
+                    },
+                    year, month, day);
+            datePickerDialog.show();
+        });
     }
 
     public void onClicVerificar(View v) {
